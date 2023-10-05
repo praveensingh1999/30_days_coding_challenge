@@ -42,11 +42,8 @@ public:
                 min4=v4;
             }
         }
-        int c1=max1-min1;
-        int c2=max2-min2;
-        int c3=max3-min3;
-        int c4=max4-min4;
-        return max(c1,max(c2,max(c3,c4)));
+        
+        return max(max1-min1,max(max2-min2,max(max3-min3,max4-min4)));
         
         
     }
