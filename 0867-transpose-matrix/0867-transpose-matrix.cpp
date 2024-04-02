@@ -9,12 +9,8 @@ public:
                  ans[j][i]=matrix[i][j];
             }
          }
-        for(int i=0;i<col;i++){
-            for(int j=0;j<row;j++){
-                cout<<ans[i][j];
-            }
-            cout<<endl;
-        }
+       
+        
         return ans;
         
     }
