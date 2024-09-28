@@ -10,11 +10,12 @@ public:
         int freq[21] = {0}; // Array size 21 to handle nums from -10 to 10
         for (int j = i; j < nums.size(); j++) {
             // We map nums[j] from [-10, 10] to [0, 20] using index shift
-            if (freq[nums[j] + 10] == 0) { // +10 to shift negative numbers to valid indices
+            if (freq[nums[j] + 10] == 0) { 
+                 freq[nums[j] + 10]++;// +10 to shift negative numbers to valid indices
                 swap(nums[i], nums[j]);
                 printpermutation(nums, i + 1);
                 swap(nums[i], nums[j]);
-                freq[nums[j] + 10]++; // Mark this number as used at this position
+                // Mark this number as used at this position
             }
         }
     }
